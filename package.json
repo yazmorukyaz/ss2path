@@ -1,0 +1,76 @@
+{
+  "name": "claude-screenshot-path",
+  "displayName": "Claude Screenshot Path",
+  "description": "Automatically copies screenshot file paths to clipboard for Claude Code usage",
+  "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "icon": "ss2path.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yazmorukyaz/ss2path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yazmorukyaz/ss2path/issues"
+  },
+  "homepage": "https://github.com/yazmorukyaz/ss2path#readme",
+  "keywords": [
+    "claude",
+    "screenshot",
+    "clipboard",
+    "automation",
+    "productivity",
+    "claude-code"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Claude Screenshot Path",
+      "properties": {
+        "claudeScreenshotPath.watchFolder": {
+          "type": "string",
+          "default": "~/Desktop",
+          "description": "Folder to watch for new screenshot files"
+        },
+        "claudeScreenshotPath.filePatterns": {
+          "type": "array",
+          "default": [
+            "Screenshot*.png",
+            "Screen Shot*.png",
+            "CleanShot*.png"
+          ],
+          "description": "File patterns to match for screenshots"
+        },
+        "claudeScreenshotPath.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable screenshot path monitoring"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "claudeScreenshotPath.toggle",
+        "title": "Toggle Screenshot Monitoring"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
