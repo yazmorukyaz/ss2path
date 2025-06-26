@@ -1,3 +1,4 @@
+![ss2path](https://github.com/user-attachments/assets/729475f7-e8ce-4fef-9cda-53ad33a20652)
 # Claude Screenshot Path
 
 [![VS Code Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=undefined_publisher.claude-screenshot-path)
